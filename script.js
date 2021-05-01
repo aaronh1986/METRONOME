@@ -1,18 +1,14 @@
-let adjustBpm = document.getElementById('bpm');
-adjustBpm.defaultValue = 50;
-adjustBpm.focus();
-
-const selfInput = document.getElementById('bpm').innerHTML;
+let input = document.getElementById('bpm');
+input.focus();
 
 let plus = document.getElementById('plus');
+let minus = document.getElementById('minus');
 
 plus.addEventListener('click', function(){
-    parseInt(selfInput += 1)
+    input.value = parseInt(input.value) + 1;
 })
 
-
-
-
-
-
+minus.addEventListener('click', function(){
+    input.value = parseInt(input.value) - 1;
+})
 
